@@ -28,6 +28,8 @@ const Store = PassedComponent => {
 				.then(json => {
 					let { store } = this.state;
 					store.project = json;
+                    store.technologiesTags= json.map((p)=>p.technology)
+
 					this.setState({
 						store
 					});

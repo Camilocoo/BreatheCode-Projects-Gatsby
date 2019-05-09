@@ -6,20 +6,20 @@ import "../styles/home.css";
 const Single = ({ pageContext }) => (
     <div>
         <div className="row p-4">
-            <div className="col-12 col-md-10 d-flex">
+            <div className="col-12 col-md d-flex">
                 <img
-                    className="img-fluid p-2"
+                    className="img-fluid p-2 d-none d-lg-block"
                     src="https://ucarecdn.com/dbe55247-376b-4b81-988e-7dd95f4233b5/-/resize/50x/"
                 />
                 <p className="h1 mt-2"> { pageContext.title }</p>
             </div>
-            <div className="col-12 col-md-2 d-flex justify-content-sm-start justify-content-md-end">
-                <div className="row d-flex align-items-baseline">
-                    <div className="col align-self-center ">
-                        <Link to="/home">
-                            <button type="button" className="btn btn-outline-secondary btn-lg  ">
+            <div className="col-12 col-md-3 d-flex justify-content-sm-start justify-content-md-end d-none d-lg-block">
+                <div className="row d-flex align-items-baseline d-none d-lg-block">
+                    <div className="col align-self-center d-none d-lg-block ">
+                        <Link  className="btn btn-outline-secondary btn-lg d-none d-lg-block " to="/home">
+                            
                                 Browse all projects
-                            </button>
+                           
                         </Link>
                     </div>
                 </div>
@@ -63,10 +63,6 @@ const Single = ({ pageContext }) => (
                                             <li key={i}>{t.badge}</li>
                                             );
                                        }):""}
-
-
-
-
                                     </ul>
                                     <div className="row text-center">
                                         <div className="col-6">

@@ -1,11 +1,19 @@
 import React from "react";
 
-import { Filter } from "@breathecode/ui-components";
+import { Filter, Icon } from "@breathecode/ui-components";
 import { SmallJumbotron } from "../components/smalljumbo.js";
 import { Link } from "gatsby";
 
 
-const Home = ({ pageContext }) => (
+
+
+
+
+
+
+
+const Home = ({ pageContext, technologyTags }) => (
+
     <div>
         <div>
             <SmallJumbotron
@@ -15,21 +23,18 @@ const Home = ({ pageContext }) => (
                 headerText="Pool of Projects"
                 pClass="lead  text-left"
             />
-
             <div className="row sticky-top bg-white border-top border-bottom">
                 <div className="container">
                     <div className="row">
                         <div className="col d-flex justify-content-start  py-1">
-                            <div className="pl-1">
-                                <Filter
-                                    label="Gender"
-                                    onChange={d => console.log(d)}
-                                    placeholder="Select one gender"
-                                    multiselect={false}
-                                    options={[
-                                        { label: "Male", value: "male" },
-                                        { label: "Female", value: "female" }
-                                    ]}
+                        <div className="pl-1">
+                            <Filter
+                                    label="Tags"
+                                    placeholder="Select one or more tags"
+                                    onChange={(technologyTags)=>console.log(technologyTags)}
+                                    options={technologyTags?technologyTags.map((t)=>{
+                                        return {label: t,value: t}
+                                    }):[{label:" ",value: " "}]}
                                 />
                             </div>
                         </div>

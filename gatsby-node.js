@@ -11,11 +11,14 @@ exports.createPages = ({ actions, graphql }) => {
         fetch("https://projects.breatheco.de/json?size=big")
             .then(resp => resp.json())
             .then(projects => {
+	            const technologyTags = projects.map(p => p.technology);
 
                 createPage({
+
                     path: `/home`,
                     component: path.resolve("./src/templates/home.js"),
                     context: {
+                        technologyTags,
                         projects
                     },
                 })

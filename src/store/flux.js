@@ -1,6 +1,7 @@
 const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
+            technologiesTags:null,
 			project: null,
 			show: false,
 			demo: [
