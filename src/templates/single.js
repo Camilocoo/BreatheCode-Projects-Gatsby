@@ -6,14 +6,14 @@ import "../styles/home.css";
 const Single = ({ pageContext }) => (
     <div>
         <div className="row p-4">
-            <div className="col-12 col-md d-flex">
+            <div className="col-12 col-md col-lg d-flex">
                 <img
-                    className="img-fluid p-2 d-none d-lg-block"
+                    className="img-fluid p-2 d-none d-md-block"
                     src="https://ucarecdn.com/dbe55247-376b-4b81-988e-7dd95f4233b5/-/resize/50x/"
                 />
                 <p className="h1 mt-2"> { pageContext.title }</p>
             </div>
-            <div className="col-12 col-md-3 d-flex justify-content-sm-start justify-content-md-end d-none d-lg-block">
+            <div className="col-12 col-sm-0 col-md-0 col-lg-3 d-flex justify-content-sm-start justify-content-md-end d-none d-lg-block">
                 <div className="row d-flex align-items-baseline d-none d-lg-block">
                     <div className="col align-self-center d-none d-lg-block ">
                         <Link  className="btn btn-outline-secondary btn-lg d-none d-lg-block " to="/home">
